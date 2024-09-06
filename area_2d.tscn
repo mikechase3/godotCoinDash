@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://d3v5c0fq60s5w"]
+[gd_scene load_steps=16 format=3 uid="uid://d3v5c0fq60s5w"]
 
+[ext_resource type="Script" path="res://Player.gd" id="1_5yh6i"]
 [ext_resource type="Texture2D" uid="uid://jxv8v5r8fkmg" path="res://assets/player/hurt/player-hurt-1.png" id="1_hwyhr"]
 [ext_resource type="Texture2D" uid="uid://ctwv2hjqeksr1" path="res://assets/player/hurt/player-hurt-2.png" id="2_jr170"]
 [ext_resource type="Texture2D" uid="uid://pev54eplxb1r" path="res://assets/player/idle/player-idle-1.png" id="3_hbn4p"]
@@ -68,8 +69,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rovjc"]
+size = Vector2(19.863, 20)
 
 [node name="Player" type="Area2D"]
+script = ExtResource("1_5yh6i")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -79,6 +82,6 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.26, 10.27)
+position = Vector2(1.5, 10.27)
 scale = Vector2(1.46, 2.21)
 shape = SubResource("RectangleShape2D_rovjc")
