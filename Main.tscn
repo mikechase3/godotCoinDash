@@ -130,13 +130,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2mmy0"]
 radius = 48.6173
 
 [node name="Player" type="Area2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_d3s11")
 metadata/_edit_group_ = true
 
@@ -145,9 +146,9 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_8polf")
 animation = &"idle"
 autoplay = "idle"
+offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 10.27)
 scale = Vector2(1.46, 2.21)
 shape = SubResource("RectangleShape2D_rovjc")
 
@@ -193,12 +194,14 @@ offset_bottom = 40.0
 
 [node name="GameTimer" type="Timer" parent="Main"]
 
-[node name="Area2D" type="Area2D" parent="Main"]
+[node name="Coin" type="Area2D" parent="Main"]
+visible = false
+metadata/_edit_group_ = true
 
-[node name="CoinAnimSpr2D" type="AnimatedSprite2D" parent="Main/Area2D" groups=["coins"]]
+[node name="CoinAnimSpr2D" type="AnimatedSprite2D" parent="Main/Coin" groups=["coins"]]
 sprite_frames = SubResource("SpriteFrames_r3unf")
 script = ExtResource("14_cy2xb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Main/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main/Coin"]
 position = Vector2(0.39, 1.16)
 shape = SubResource("CircleShape2D_2mmy0")
