@@ -4,6 +4,9 @@ extends Area2D
 var velocity = Vector2.ZERO
 var screensize = Vector2(480, 720)
 
+func pickup():
+	queue_free()  # Godo's method for removing nodes.
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
