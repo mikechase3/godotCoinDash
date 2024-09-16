@@ -1,3 +1,10 @@
+Button
+Label
+MarginContainer
+CanvasLayer
 CollisionShape2D
-AnimatedSprite2D
+Timer
+TextureRect
+Node
 Area2D
+AnimatedSprite2D
