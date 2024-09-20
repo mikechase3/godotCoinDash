@@ -14,6 +14,10 @@ config/name="coin-dash"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[debug]
+
+gdscript/warnings/unsafe_property_access=1
+
 [display]
 
 window/size/viewport_width=960
