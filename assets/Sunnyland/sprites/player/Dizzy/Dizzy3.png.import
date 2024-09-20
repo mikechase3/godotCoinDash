@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctt425alru8uo"
-path="res://.godot/imported/Dizzy3.png-98d6cfb5f5c50b8c541ec66beae0fc5e.ctex"
+path="res://.godot/imported/Dizzy3.png-d9d32205c957bb34c4befd6929a080c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/player/Dizzy/Dizzy3.png"
-dest_files=["res://.godot/imported/Dizzy3.png-98d6cfb5f5c50b8c541ec66beae0fc5e.ctex"]
+source_file="res://assets/Sunnyland/sprites/player/Dizzy/Dizzy3.png"
+dest_files=["res://.godot/imported/Dizzy3.png-d9d32205c957bb34c4befd6929a080c2.ctex"]
 
 [params]
 

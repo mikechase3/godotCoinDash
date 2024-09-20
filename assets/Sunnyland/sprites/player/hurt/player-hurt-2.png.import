@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xvheqyy3k6sm"
-path="res://.godot/imported/player-hurt-2.png-42db4c96ce258ae0930e0f6831cf9bea.ctex"
+path="res://.godot/imported/player-hurt-2.png-9374d0caf2780dce886bb7f3e9f2ec2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/player/hurt/player-hurt-2.png"
-dest_files=["res://.godot/imported/player-hurt-2.png-42db4c96ce258ae0930e0f6831cf9bea.ctex"]
+source_file="res://assets/Sunnyland/sprites/player/hurt/player-hurt-2.png"
+dest_files=["res://.godot/imported/player-hurt-2.png-9374d0caf2780dce886bb7f3e9f2ec2b.ctex"]
 
 [params]
 

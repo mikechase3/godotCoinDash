@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byt2gv63qnu8l"
-path="res://.godot/imported/big-crate.png-c2cb3ac6c8e2a0e420cc8a6df73b0329.ctex"
+path="res://.godot/imported/big-crate.png-67a3a61b316663912ab3079033b61c23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/big-crate.png"
-dest_files=["res://.godot/imported/big-crate.png-c2cb3ac6c8e2a0e420cc8a6df73b0329.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/big-crate.png"
+dest_files=["res://.godot/imported/big-crate.png-67a3a61b316663912ab3079033b61c23.ctex"]
 
 [params]
 

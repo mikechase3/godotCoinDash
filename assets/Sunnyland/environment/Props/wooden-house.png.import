@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6wb2ffjleald"
-path="res://.godot/imported/wooden-house.png-6d28f8f8cd948010545ab39866c183e1.ctex"
+path="res://.godot/imported/wooden-house.png-73a99de6442e68d429aedc274f4b5472.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/wooden-house.png"
-dest_files=["res://.godot/imported/wooden-house.png-6d28f8f8cd948010545ab39866c183e1.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/wooden-house.png"
+dest_files=["res://.godot/imported/wooden-house.png-73a99de6442e68d429aedc274f4b5472.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfjdw7n8l8hmg"
-path="res://.godot/imported/player-jump-1.png-6e026aa8aa13d36e7c06f03137b2fc95.ctex"
+path="res://.godot/imported/player-jump-1.png-36eed873ced6b7846866dc4f1801be87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/player/jump/player-jump-1.png"
-dest_files=["res://.godot/imported/player-jump-1.png-6e026aa8aa13d36e7c06f03137b2fc95.ctex"]
+source_file="res://assets/Sunnyland/sprites/player/jump/player-jump-1.png"
+dest_files=["res://.godot/imported/player-jump-1.png-36eed873ced6b7846866dc4f1801be87.ctex"]
 
 [params]
 

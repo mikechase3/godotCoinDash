@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpg3l6d617maj"
-path="res://.godot/imported/face-block.png-e546e2f1f1593393d0828b958333f90a.ctex"
+path="res://.godot/imported/face-block.png-44ff07eee3e860f8b635dafedc63d73d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/face-block.png"
-dest_files=["res://.godot/imported/face-block.png-e546e2f1f1593393d0828b958333f90a.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/face-block.png"
+dest_files=["res://.godot/imported/face-block.png-44ff07eee3e860f8b635dafedc63d73d.ctex"]
 
 [params]
 

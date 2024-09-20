@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://unsylapn60ia"
-path="res://.godot/imported/player-crouch-1.png-7a1c5a6cc5ec248d9363d7a66f8e0328.ctex"
+path="res://.godot/imported/player-crouch-1.png-8acc9c72c6005c3558a0a38dfc59867e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/player/crouch/player-crouch-1.png"
-dest_files=["res://.godot/imported/player-crouch-1.png-7a1c5a6cc5ec248d9363d7a66f8e0328.ctex"]
+source_file="res://assets/Sunnyland/sprites/player/crouch/player-crouch-1.png"
+dest_files=["res://.godot/imported/player-crouch-1.png-8acc9c72c6005c3558a0a38dfc59867e.ctex"]
 
 [params]
 

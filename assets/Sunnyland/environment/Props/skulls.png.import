@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmuqeoupa14y2"
-path="res://.godot/imported/skulls.png-cd9bba801b9fc04db21ad7618df02243.ctex"
+path="res://.godot/imported/skulls.png-faea06bc659fd817eddf9e869aa15697.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/skulls.png"
-dest_files=["res://.godot/imported/skulls.png-cd9bba801b9fc04db21ad7618df02243.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/skulls.png"
+dest_files=["res://.godot/imported/skulls.png-faea06bc659fd817eddf9e869aa15697.ctex"]
 
 [params]
 

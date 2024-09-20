@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cswqna0vt1qjy"
-path="res://.godot/imported/lookUp.png-729d832ae63519460847bfcc60e1f6d8.ctex"
+path="res://.godot/imported/lookUp.png-e0974eaec0b508ce4a016d85a8708673.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/player/LookUp/lookUp.png"
-dest_files=["res://.godot/imported/lookUp.png-729d832ae63519460847bfcc60e1f6d8.ctex"]
+source_file="res://assets/Sunnyland/sprites/player/LookUp/lookUp.png"
+dest_files=["res://.godot/imported/lookUp.png-e0974eaec0b508ce4a016d85a8708673.ctex"]
 
 [params]
 

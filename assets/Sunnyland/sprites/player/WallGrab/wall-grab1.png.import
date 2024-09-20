@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkmfvxxad0m7s"
-path="res://.godot/imported/wall-grab1.png-e8e4dbdfe0b3c05591bf39672d13ea71.ctex"
+path="res://.godot/imported/wall-grab1.png-c0481e7467878abaaf3214395da43a9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/player/WallGrab/wall-grab1.png"
-dest_files=["res://.godot/imported/wall-grab1.png-e8e4dbdfe0b3c05591bf39672d13ea71.ctex"]
+source_file="res://assets/Sunnyland/sprites/player/WallGrab/wall-grab1.png"
+dest_files=["res://.godot/imported/wall-grab1.png-c0481e7467878abaaf3214395da43a9f.ctex"]
 
 [params]
 

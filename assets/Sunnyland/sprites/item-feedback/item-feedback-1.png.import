@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7welopipi4pw"
-path="res://.godot/imported/item-feedback-1.png-6505e712fcb8ee05b1aaae69aec2aadd.ctex"
+path="res://.godot/imported/item-feedback-1.png-4f41874cee2ce9436d17be59408b212e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/item-feedback/item-feedback-1.png"
-dest_files=["res://.godot/imported/item-feedback-1.png-6505e712fcb8ee05b1aaae69aec2aadd.ctex"]
+source_file="res://assets/Sunnyland/sprites/item-feedback/item-feedback-1.png"
+dest_files=["res://.godot/imported/item-feedback-1.png-4f41874cee2ce9436d17be59408b212e.ctex"]
 
 [params]
 

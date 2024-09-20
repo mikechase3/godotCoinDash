@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu75smjuiaju5"
-path="res://.godot/imported/door-opened.png-fad915f2d4d88008754ce1de294b3590.ctex"
+path="res://.godot/imported/door-opened.png-b116921f255ef4f49ec3daed47fe38ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/door-opened.png"
-dest_files=["res://.godot/imported/door-opened.png-fad915f2d4d88008754ce1de294b3590.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/door-opened.png"
+dest_files=["res://.godot/imported/door-opened.png-b116921f255ef4f49ec3daed47fe38ea.ctex"]
 
 [params]
 

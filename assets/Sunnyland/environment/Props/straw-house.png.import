@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm8why4sjjfye"
-path="res://.godot/imported/straw-house.png-f645dc881b3cf1a373b79f7b6f3d297d.ctex"
+path="res://.godot/imported/straw-house.png-2efbb98ab7ba37169e124154805fd0a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/straw-house.png"
-dest_files=["res://.godot/imported/straw-house.png-f645dc881b3cf1a373b79f7b6f3d297d.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/straw-house.png"
+dest_files=["res://.godot/imported/straw-house.png-2efbb98ab7ba37169e124154805fd0a4.ctex"]
 
 [params]
 

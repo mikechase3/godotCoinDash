@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfdfcg3g7ckjv"
-path="res://.godot/imported/crank-up.png-102e1ab2e9cb835e70801b5afe8c2d7d.ctex"
+path="res://.godot/imported/crank-up.png-abd83b8a691e2d9fb6f58c0b5ff0f749.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/crank-up.png"
-dest_files=["res://.godot/imported/crank-up.png-102e1ab2e9cb835e70801b5afe8c2d7d.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/crank-up.png"
+dest_files=["res://.godot/imported/crank-up.png-abd83b8a691e2d9fb6f58c0b5ff0f749.ctex"]
 
 [params]
 

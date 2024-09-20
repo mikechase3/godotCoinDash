@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6kh2fyo7a1og"
-path="res://.godot/imported/Roll1.png-73fc476e293d400f461d4f943f972cb5.ctex"
+path="res://.godot/imported/Roll1.png-c4a56950cb5177bdbaf94da66d8bff47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/player/Roll/Roll1.png"
-dest_files=["res://.godot/imported/Roll1.png-73fc476e293d400f461d4f943f972cb5.ctex"]
+source_file="res://assets/Sunnyland/sprites/player/Roll/Roll1.png"
+dest_files=["res://.godot/imported/Roll1.png-c4a56950cb5177bdbaf94da66d8bff47.ctex"]
 
 [params]
 

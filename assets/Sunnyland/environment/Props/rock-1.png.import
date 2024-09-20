@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0jb5n1ke05s6"
-path="res://.godot/imported/rock-1.png-a1c915214d192f437bed685f6ecbcdcb.ctex"
+path="res://.godot/imported/rock-1.png-e8efcb03a6965517f07203d903e45bac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/rock-1.png"
-dest_files=["res://.godot/imported/rock-1.png-a1c915214d192f437bed685f6ecbcdcb.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/rock-1.png"
+dest_files=["res://.godot/imported/rock-1.png-e8efcb03a6965517f07203d903e45bac.ctex"]
 
 [params]
 

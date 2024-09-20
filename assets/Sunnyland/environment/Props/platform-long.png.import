@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1hv2h8kwsrw1"
-path="res://.godot/imported/platform-long.png-ffb77ca588e23de9eaa631d348581e9b.ctex"
+path="res://.godot/imported/platform-long.png-178f890a7ed2b645b8a4b62198bdaf87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/platform-long.png"
-dest_files=["res://.godot/imported/platform-long.png-ffb77ca588e23de9eaa631d348581e9b.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/platform-long.png"
+dest_files=["res://.godot/imported/platform-long.png-178f890a7ed2b645b8a4b62198bdaf87.ctex"]
 
 [params]
 

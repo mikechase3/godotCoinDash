@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7ck7s154uqyk"
-path="res://.godot/imported/eagle-attack-3.png-2b0ee06e11af88224276670d5892e9e0.ctex"
+path="res://.godot/imported/eagle-attack-3.png-513704e9e6f7cebd5c7ca0fa0ee72331.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/sprites/eagle/eagle-attack-3.png"
-dest_files=["res://.godot/imported/eagle-attack-3.png-2b0ee06e11af88224276670d5892e9e0.ctex"]
+source_file="res://assets/Sunnyland/sprites/eagle/eagle-attack-3.png"
+dest_files=["res://.godot/imported/eagle-attack-3.png-513704e9e6f7cebd5c7ca0fa0ee72331.ctex"]
 
 [params]
 

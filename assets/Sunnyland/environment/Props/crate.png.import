@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj511ckv2uqhe"
-path="res://.godot/imported/crate.png-36cd8cb6042f4cfa1131e373e3c8382b.ctex"
+path="res://.godot/imported/crate.png-26986935b343cec83e472ff94ac58c16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/crate.png"
-dest_files=["res://.godot/imported/crate.png-36cd8cb6042f4cfa1131e373e3c8382b.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/crate.png"
+dest_files=["res://.godot/imported/crate.png-26986935b343cec83e472ff94ac58c16.ctex"]
 
 [params]
 

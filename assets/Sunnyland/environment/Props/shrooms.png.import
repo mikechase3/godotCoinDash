@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gdvkxv0d0buu"
-path="res://.godot/imported/shrooms.png-b89115cc77ed020110297a2b02e345ae.ctex"
+path="res://.godot/imported/shrooms.png-9ea873185d3f5c83935833d05ad14852.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/shrooms.png"
-dest_files=["res://.godot/imported/shrooms.png-b89115cc77ed020110297a2b02e345ae.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/shrooms.png"
+dest_files=["res://.godot/imported/shrooms.png-9ea873185d3f5c83935833d05ad14852.ctex"]
 
 [params]
 

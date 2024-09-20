@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwgt3nm5mtwpm"
-path="res://.godot/imported/tree-house.png-3d2f93b9629367458c2a64be8bfa3764.ctex"
+path="res://.godot/imported/tree-house.png-697a47586d4dd49cb62d9f1eabad0e92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Packs/Sunnyland/environment/Props/tree-house.png"
-dest_files=["res://.godot/imported/tree-house.png-3d2f93b9629367458c2a64be8bfa3764.ctex"]
+source_file="res://assets/Sunnyland/environment/Props/tree-house.png"
+dest_files=["res://.godot/imported/tree-house.png-697a47586d4dd49cb62d9f1eabad0e92.ctex"]
 
 [params]
 
