@@ -1,6 +1,6 @@
 extends Area2D
 
-signal pickup
+signal pickup(item: String)
 signal hurt
 
 # Initialization and Variables
@@ -47,15 +47,15 @@ func _on_area_entered(area: Area2D) -> void:
 		die()
 		
 # For GameManager or HUD Script
-func _ready() -> void:
-	pass
-	#$Player.connect("pickup", self, "_on_player_pickup")
-	#$Player.connect("hurt", self, "_on_player_hurt")
-	
-func _on_pickup(item: String) -> void:
-	print("Picked up:", item)
-	# Handle the item pickup (update HUD, score, etc.)
-
-func _on_hurt() -> void:
-	print("Player hurt")
-	# Handle player being hurt (reduce health, play sound, etc.)
+#func _ready() -> void:
+	#pass
+	##$Player.connect("pickup", self, "_on_player_pickup")
+	##$Player.connect("hurt", self, "_on_player_hurt")
+	#
+#func _on_pickup(item: String) -> void:
+	#print("Picked up:", item)
+	## Handle the item pickup (update HUD, score, etc.)
+#
+#func _on_hurt() -> void:
+	#print("Player hurt")
+	## Handle player being hurt (reduce health, play sound, etc.)
