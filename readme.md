@@ -8,6 +8,7 @@ I use the terms slide & page interchangeably.
 	* The Node2D transform position works as expected
 	* Using the handles to scale does not affect the scale values.
 * TODO: link fox01 gif.
+* Testing 2024SEP20at930AM
 
 
-[1]:	https://github.com/PacktPublishing/Godot-4-Game-Development-Projects-Second-Edition/tree/main/
+https://github.com/PacktPublishing/Godot-4-Game-Development-Projects-Second-Edition/tree/main/
