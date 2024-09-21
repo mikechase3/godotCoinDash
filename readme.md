@@ -53,4 +53,6 @@ And signaling you can get a specific thing? I mean, couldn't you just assign IDs
 
 Google says decoupling, modular design, event driven programming, scalability: multiple listeners, dynamic connections, loose coupling, easier matenance? I'll read or ask prof more about that later once I finish. 
 
-
+### Can't access child's screen size property
+I spent an hour trying to figure out why I can't access `screensize` from the `scene_coin`. 
+Turns out the IDE won't catch a misnamed variable. It ended up being a runtime error to my surprise.

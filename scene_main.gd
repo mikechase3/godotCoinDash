@@ -29,7 +29,7 @@ func _ready() -> void:  # called on every node when it's added (instantiated?)
 	$ScenePlayer.connect("hurt", hurtCall)
 	$ScenePlayer.connect("pickup", pickupCall)
 	
-	new_game()  # for debugging, to be replaced with a button.
+	#new_game()  # for debugging, to be replaced with a button.
 
 func new_game():
 	playing = true
@@ -46,7 +46,7 @@ func spawn_coins():
 	for i in numCoinsToSpawn:
 		var c = coin_scene.instantiate()  # a "packed scene"; declared at top
 		add_child(c)  # adds child to scene tree at bottom I hope.
-		c.screensize = screensize
+		c.screen_size = screensize
 		var rx = randi_range(0, screensize.x)
 		var ry = randi_range(0, screensize.y)
 		c.position = Vector2(rx, ry)
@@ -64,4 +64,7 @@ func _on_player_hurt() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if playing and get_tree().get_nodes_in_group("coins").size() < 1:
+		level = level + 1
+		time_left += 5
+		spawn_coins()
