@@ -56,3 +56,11 @@ Google says decoupling, modular design, event driven programming, scalability: m
 ### Can't access child's screen size property
 I spent an hour trying to figure out why I can't access `screensize` from the `scene_coin`. 
 Turns out the IDE won't catch a misnamed variable. It ended up being a runtime error to my surprise.
+
+### MarginContainers Slash?
+* I've never seen an access of Property/SubProperty before.
+* Is this something that's done in other languages?
+* I'd accept a .get() function.
+* **Solution**: it's part of the tree. Trees have refs to other nodes and this is a shortcut probbaly.
+it is like a file structure
+

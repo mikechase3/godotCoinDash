@@ -26,6 +26,8 @@ func _ready() -> void:  # called on every node when it's added (instantiated?)
 	#$ScenePlayer.connect("hurt", self, "_on_player_hurt")
 	var hurtCall = Callable(self, "_on_player_hurt")
 	var pickupCall = Callable(self, "_on_player_pickup")
+	
+	
 	$ScenePlayer.connect("hurt", hurtCall)
 	$ScenePlayer.connect("pickup", pickupCall)
 	
@@ -60,6 +62,8 @@ func _on_player_pickup(item: String) -> void:
 func _on_player_hurt() -> void:
 	print("Player hurt")
 	# Handle player hurt. Reduce time.
+	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

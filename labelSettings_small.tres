@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cpfyaj0pi5ytb"]
+
+[ext_resource type="FontFile" uid="uid://dxg5k85m2xveg" path="res://assets/Kenney Bold.ttf" id="1_3attm"]
+
+[resource]
+font = ExtResource("1_3attm")
+font_size = 24
+shadow_color = Color(0, 0.333333, 0, 0.552941)
