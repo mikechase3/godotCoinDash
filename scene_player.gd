@@ -6,15 +6,16 @@ signal hurt
 # Initialization and Variables
 @export var speed: int = 350
 var velocity: Vector2 = Vector2.ZERO
-var screensize: Vector2 = Vector2(480, 720)
+var screensize: Vector2 = Vector2(960, 1440)
 
 
 func _process(delta: float) -> void:
 	# Handle user's input.
+	var iDontLikeThisSolution: int = 1  # Safe to remove now! 
 	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	position += velocity * speed * delta  # Position is a Vector2
-	position.x = clamp(position.x, 0, screensize.x)
-	position.y = clamp(position.y, 0, screensize.y)
+	position.x = clamp(position.x, 0, screensize.x * iDontLikeThisSolution)
+	position.y = clamp(position.y, 0, screensize.y * iDontLikeThisSolution)
 	
 	# Flip the sprite when moving & 
 	if velocity.length() > 0:
@@ -45,6 +46,11 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("obstacles"):
 		hurt.emit()
 		die()
+		
+func __help__() -> String:
+	print("Running from scene_player... returning a string")
+	return("You called help from ScenePlayer")
+
 		
 # For GameManager or HUD Script
 #func _ready() -> void:

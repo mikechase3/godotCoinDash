@@ -179,6 +179,7 @@ animations = [{
 size = Vector2(30, 46.5)
 
 [node name="ScenePlayer" type="Area2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_cxiuh")
 metadata/_edit_group_ = true
 

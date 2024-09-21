@@ -7,6 +7,7 @@
 
 [node name="scene_main" type="Node"]
 script = ExtResource("1_f8dbk")
+coin_scene = ExtResource("3_wqgvj")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -20,5 +21,6 @@ stretch_mode = 1
 [node name="SceneCoin" parent="." instance=ExtResource("3_wqgvj")]
 
 [node name="ScenePlayer" parent="." instance=ExtResource("4_buss6")]
+position = Vector2(70, 70)
 
 [node name="GameTimer" type="Timer" parent="."]
