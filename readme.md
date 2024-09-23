@@ -26,8 +26,8 @@ TODO: register manipulation some more?
   * Forgot how to replicate this.
   * Thing you are supposed to realize this when adding collision for the first time?
   * Broader issue I didn't know was an issue was that **collision shape rect has more properties**
-    * Found this out when adjusting radius.
-    * You don't scale your 1x1 circle but adjust radius by clicking that shape to expose more properties.
+	* Found this out when adjusting radius.
+	* You don't scale your 1x1 circle but adjust radius by clicking that shape to expose more properties.
 
 ### How to signal via scripting?
 * Inspector node signaling sucks. 
@@ -64,3 +64,12 @@ Turns out the IDE won't catch a misnamed variable. It ended up being a runtime e
 * **Solution**: it's part of the tree. Trees have refs to other nodes and this is a shortcut probbaly.
 it is like a file structure
 
+### Debugging Signals from Timer to Main and Back
+Having issues with signaling. Rubber duck didn't work, so now docs and then professional help.
+1. `scene_hud: bp_scene` bp_scene has `GameTimer:bp_timer` child.
+2. `scene_hud.gd` only signals `start_game` which is only emitted when button is pressed. 
+	* We also hide message here
+	* And hide the button.
+	* then emit_signal("start_game")
+3. Start game passes it onto main.
+	* Main has a callable c that'll 

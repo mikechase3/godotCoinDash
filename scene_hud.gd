@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal start_game
+# signal pressed happens on default of a button being pressed.
 
 func update_score(value):
 	$MarginContainer/Score.text = str(value)
@@ -19,7 +20,7 @@ func _on_timer_timeout():
 func _on_start_button_pressed():
 	$StartButton.hide()
 	$Message.hide()
-	start_game.emit()
+	emit_signal("start_game")
 
 func show_game_over():
 	show_message("Game Over")

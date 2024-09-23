@@ -51,6 +51,8 @@ func __help__() -> String:
 	print("Running from scene_player... returning a string")
 	return("You called help from ScenePlayer")
 
+
+
 		
 # For GameManager or HUD Script
 #func _ready() -> void:

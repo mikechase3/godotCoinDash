@@ -54,7 +54,12 @@ vertical_alignment = 1
 [node name="Timer" type="Timer" parent="."]
 
 [node name="StartButton" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -54.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_otte8")
-text = "I'm A Button"
+text = "Start Mike Chase's Boring Coin Dash?"
