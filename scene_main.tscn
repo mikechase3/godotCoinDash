@@ -22,7 +22,7 @@ stretch_mode = 1
 [node name="SceneCoin" parent="." instance=ExtResource("3_wqgvj")]
 
 [node name="ScenePlayer" parent="." instance=ExtResource("4_buss6")]
-position = Vector2(70, 70)
+position = Vector2(502, 867)
 
 [node name="GameTimer" type="Timer" parent="."]
 

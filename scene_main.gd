@@ -32,10 +32,14 @@ func _ready() -> void:  # called on every node when it's added (instantiated?)
 	var call_start_game_from_hud = Callable(self, "_on_game_timer_timeout")
 	$GameTimer.timeout.connect(call_start_game_from_hud)
 	
-	
-	#scene_main.start_game() -> scene_main._on_hud_start_game()
-	
-	
+	# Connect the Hub
+	#print("Is scene_hub valid?: If null, that's bad. ")
+	#print($scene_hud)
+	$scene_hud.start_game.connect(Callable(self, "_on_hud_start_game"))
+	#var temp_callable = Callable(self, "start_game")
+	#if temp_callable == true:
+		#print("scene_main.gd DEBUG: Received the start_game signal on scene_main.gd probably!")
+	#$scene_hud.start_game.connect("_on_hud_start_game", temp_callable)
 	#new_game()  # for debugging, to be replaced with a button.
 
 
@@ -71,7 +75,7 @@ func _process(delta: float) -> void:
 
 func _on_game_timer_timeout():
 	time_left -= 1
-	$HUD.update_timer(time_left)
+	$scene_hud.update_timer(time_left)
 	if time_left < 0:
 		game_over()  # end if the game's time is up.
 
@@ -82,17 +86,27 @@ func game_over():
 	$scene_hud.show_game_over()
 	$ScenePlayer.die()
 
-func _on_hud_start_game():
-	new_game()
+func _on_hud_start_game():  # TODO: Delete. never gets called?!!
+	print("DEBUG at scene_main._on_hud_start_game(): Received the start_game signal on scene_main.gd")
+	new_game()  # starts a new game when HUD sends the start_game signal.
 	
 func new_game() -> void:
 	playing = true
 	level = 1
 	score = 0
 	time_left = playtime
+	
+	# Start the player/timer:
 	$ScenePlayer.start()
 	$ScenePlayer.show()
 	$GameTimer.start()
+	
+	# Spawn coins & update the HUD
 	spawn_coins()
 	$scene_hud.update_score(score)
 	$scene_hud.update_timer(time_left)
+
+
+#func _on_scene_hud_start_game() -> void:
+	#print("DEBUG at scene_main._on_hud_start_game(): Received the start_game signal on scene_main.gd")
+	#new_game()  # starts a new game when HUD sends the start_game signal.

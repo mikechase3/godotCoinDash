@@ -65,11 +65,77 @@ Turns out the IDE won't catch a misnamed variable. It ended up being a runtime e
 it is like a file structure
 
 ### Debugging Signals from Timer to Main and Back
-Having issues with signaling. Rubber duck didn't work, so now docs and then professional help.
-1. `scene_hud: bp_scene` bp_scene has `GameTimer:bp_timer` child.
-2. `scene_hud.gd` only signals `start_game` which is only emitted when button is pressed. 
-	* We also hide message here
-	* And hide the button.
-	* then emit_signal("start_game")
-3. Start game passes it onto main.
-	* Main has a callable c that'll 
+
+I’ve been wrestling with some signal issues, and it’s time to document my confusion. My rubber duck debugging didn’t work, so I turned to the docs, and now I’m gearing up for some professional help in office hours.
+
+1. **Scene Structure**: 
+   * `scene_hud: bp_scene` has a child node called `GameTimer:bp_timer`.
+2. **Signal Emission in `scene_hud.gd`**: 
+   * The script only emits the `start_game` signal, and this happens when a button is pressed.
+   * When the button is clicked, I hide the message, hide the button, and then emit the signal with `emit_signal("start_game")`.
+   * `StartButton` automatically triggers `_on_StartButton_pressed()`.
+3. **How I'm Signaling `start_game`**: 
+   * This is where things get fuzzy. I’m signaling using `emit_signal("start_game")`, but I’m not sure if I’m handling it right.
+   * I thought I had to pass a `Callable` with the `connect` method? ChatGPT says I don't?
+   * I tried creating `temp_callable = Callable(self, "start_game")` and used `$scene_hud.start_game.connect("function name", temp_callable)`, but then I was told I don’t need that, so now I’m kind of lost on when and why to use `Callable`.
+
+**Status**: No syntax errors anymore, but I’m getting a runtime error now.
+
+---
+
+Here's your documentation updated with all the key points, including the journey through your challenges and learning:
+
+### Start Button Still Doesn’t Work
+I had really crappy notes & had an AI re-write them more concisely. I spent about 3hrs on this bug, maybe 6hrs of less focused work:
+
+The button doesn’t seem to do anything. It should hide itself, hide the message, and start the game, but it’s not cooperating. I’ve checked the signal connections, but something’s still off. I'll look at the solution, but might have to sort it out during office hours.
+
+1. **Initial Check:**
+   ```python
+   # Connect the Hub
+   print("Is scene_hub valid?: If null, that's bad.")
+   print($scene_hud)
+   $scene_hud.start_game.connect(Callable(self, "_on_hud_start_game"))
+   ```
+   This gets called. It's not null, but a reference to a CanvasLayer as expected.
+
+2. **UI Connection Issue:**
+   Interestingly, when I do it through the UI like the book says to, it generates this:
+   ```python
+   func _on_scene_hud_start_game() -> void:
+       pass # Replace with function body.
+   ```
+   The signal for the `scene_hud` shows a green `..:: _on_scene_hud_start_game()` function in `scene_main`. 
+
+3. **Identifying the Problem:**
+   Could the word `scene` matching with my file tree really be the big deal? I was confused about whether I needed to make a connection for the button's `pressed()` signal or if it would work automatically.
+
+4. **Solution Found:**
+   After much back and forth, I discovered that I needed to manually connect the button's `pressed()` signal to my handler method. The correct implementation in `_ready()` is:
+   ```python
+   func _ready() -> void:
+       var callablePressed = Callable(self, "_on_start_button_pressed")
+       $StartButton.connect("pressed", callablePressed)
+   ```
+
+### Key Takeaways:
+- Always remember to connect button signals manually; they don’t do this automatically.
+- Use `Callable` when connecting signals to avoid errors with the expected argument types.
+- The confusion with the word "scene" in the function name did not affect the functionality; it was just a naming convention that caused concern.
+
+### Minor: Remember IDE won't check filenames.
+So I tried referencing `$HUD` because that's what the book calls it.
+* I named it `scene_hud` and tried calling that
+
+```python
+func _on_game_timer_timeout():
+    time_left -= 1
+    if $HUD:
+        $HUD.update_timer(time_left)
+    else:
+        print("HUD is null!")
+    if time_left < 0:
+        game_over()  # end if the game's time is up.
+```
+
+It gave me some error about null references for $HUD. Changing it to `$scene_hud.update_timer(time_left)` worked though. 

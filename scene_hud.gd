@@ -3,6 +3,10 @@ extends CanvasLayer
 signal start_game
 # signal pressed happens on default of a button being pressed.
 
+func _ready() -> void:
+	var callablePressed = Callable(self, "_on_start_button_pressed")
+	$StartButton.connect("pressed", callablePressed)
+
 func update_score(value):
 	$MarginContainer/Score.text = str(value)
 
@@ -20,6 +24,7 @@ func _on_timer_timeout():
 func _on_start_button_pressed():
 	$StartButton.hide()
 	$Message.hide()
+	print("DEBUG at scene.hud.gd: attempting to emit start_game signal to scene_main.gd")
 	emit_signal("start_game")
 
 func show_game_over():
