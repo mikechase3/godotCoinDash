@@ -53,17 +53,22 @@ func spawn_coins():
 		var rx = randi_range(0, screensize.x)
 		var ry = randi_range(0, screensize.y)
 		c.position = Vector2(rx, ry)
+	$LevelSound.play()
 			
 
 	
 func _on_player_pickup(item: String) -> void:
 	score += 1
 	print("Picked up: ", item)
+	$CoinSound.play()
 	# Handle picking up my item.
+	
+	
 	
 func _on_player_hurt() -> void:
 	game_over()
 	print("Player hurt")
+	$EndSound.play()
 	# Handle player hurt. Reduce time.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -107,6 +112,13 @@ func new_game() -> void:
 	$scene_hud.update_timer(time_left)
 
 
+
 #func _on_scene_hud_start_game() -> void:
 	#print("DEBUG at scene_main._on_hud_start_game(): Received the start_game signal on scene_main.gd")
 	#new_game()  # starts a new game when HUD sends the start_game signal.
+
+
+func _on_powerup_timer_timeout() -> void:
+	var p = powerup_scene.instantiate()
+	add_child(p)
+	p.screensize = screensize p.position = 
