@@ -14,6 +14,7 @@
 [node name="scene_main" type="Node"]
 script = ExtResource("1_f8dbk")
 coin_scene = ExtResource("3_wqgvj")
+powerup_scene = ExtResource("6_tnrnj")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15

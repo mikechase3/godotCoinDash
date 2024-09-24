@@ -135,8 +135,8 @@ func new_game() -> void:
 func _on_powerup_timer_timeout():
 	var p = powerup_scene.instantiate()
 	add_child(p)
-	p.screensize = screensize
-	p.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
+	#p.screensize = screensize
+	p.position = Vector2(randi_range(0, 960), randi_range(0, 1440))
 
 
 func _on_scene_player_pickup(item: String) -> void:  # What actually runs; not 

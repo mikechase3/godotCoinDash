@@ -42,7 +42,7 @@ func _on_area_entered(area: Area2D) -> void:
 		area.pickup()
 		pickup.emit("coin")
 	if area.is_in_group("powerups"):
-		area.pickup()
+		area.pickup()  # Weird nonexisten function in some levels. Runtime error?
 		pickup.emit("powerup")
 	if area.is_in_group("obstacles"):
 		hurt.emit()
