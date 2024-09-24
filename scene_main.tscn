@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7x64pbrsjc8w"]
+[gd_scene load_steps=11 format=3 uid="uid://b7x64pbrsjc8w"]
 
 [ext_resource type="Script" path="res://scene_main.gd" id="1_f8dbk"]
 [ext_resource type="Texture2D" uid="uid://dk7q4eb0rrtit" path="res://assets/grass.png" id="2_hppee"]
@@ -9,16 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://dglacfy2lmv0i" path="res://powerup.tscn" id="6_tnrnj"]
 [ext_resource type="AudioStream" uid="uid://ewe0jxibi63j" path="res://assets/audio/Level.wav" id="7_77rjn"]
 [ext_resource type="AudioStream" uid="uid://di0b1u7ix2ioa" path="res://assets/audio/EndSound.wav" id="8_lxtmg"]
+[ext_resource type="AudioStream" uid="uid://d21ylnvtsskgw" path="res://assets/audio/Powerup.wav" id="10_adaiy"]
 
 [node name="scene_main" type="Node"]
 script = ExtResource("1_f8dbk")
 coin_scene = ExtResource("3_wqgvj")
-playtime = null
-level = null
-score = null
-time_left = null
-screensize = null
-playing = null
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -28,8 +23,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_hppee")
 stretch_mode = 1
-
-[node name="SceneCoin" parent="." instance=ExtResource("3_wqgvj")]
 
 [node name="ScenePlayer" parent="." instance=ExtResource("4_buss6")]
 position = Vector2(502, 867)
@@ -53,4 +46,10 @@ stream = ExtResource("8_lxtmg")
 wait_time = 2.0
 one_shot = true
 
+[node name="PowerupSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_adaiy")
+
+[connection signal="area_entered" from="ScenePlayer" to="." method="_on_scene_player_area_entered"]
+[connection signal="hurt" from="ScenePlayer" to="." method="_on_scene_player_hurt"]
+[connection signal="pickup" from="ScenePlayer" to="." method="_on_scene_player_pickup"]
 [connection signal="timeout" from="PowerupTimer" to="." method="_on_powerup_timer_timeout"]

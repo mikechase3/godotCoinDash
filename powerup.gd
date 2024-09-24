@@ -18,7 +18,7 @@ func _ready() -> void:
 	if screen_size == Vector2.ZERO:
 		screen_size = get_viewport().get_visible_rect().size
 	$Timer.start(randf_range(3, 8))
-	$AnimatedSprite2d.frame = 0
+	$AnimatedSprite2D.frame = 0
 	
 
 

@@ -1,6 +1,6 @@
 extends Area2D
 
-signal pickup(item: String)
+signal pickup
 signal hurt
 
 # Initialization and Variables
@@ -37,6 +37,7 @@ func die() -> void:
 	
 
 func _on_area_entered(area: Area2D) -> void:
+	print("Debug scene_payer _on_area_entered.")
 	if area.is_in_group("coins"):
 		area.pickup()
 		pickup.emit("coin")

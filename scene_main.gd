@@ -2,7 +2,9 @@ extends Node
 
 # Global Vars
 @export var coin_scene: PackedScene  # point to .tscn in the inspector?
+@export var powerup_scene: PackedScene
 @export var playtime = 30
+
 @export var level = 1
 @export var score = 0
 @export var time_left = 0
@@ -57,31 +59,42 @@ func spawn_coins():
 			
 
 	
-func _on_player_pickup(item: String) -> void:
-	score += 1
-	print("Picked up: ", item)
-	$CoinSound.play()
+func _on_player_pickup(item: String) -> void:  # Unused; my attempt.
+	print("DEBUG scene_main._on_player_pickup")
+	match item:
+		"coin":
+			$CoinSound.play()
+			score += 1
+			$scene_hud.update_score(score)
+		"powerup":
+			$PowerupSound.play()
+			time_left += 5
+			$scene_hud.update_timer(time_left)
 	# Handle picking up my item.
 	
 	
 	
 func _on_player_hurt() -> void:
+	"""
+	Handle player hurt. Reduce time.
+	"""
+	
 	game_over()
-	print("Player hurt")
-	$EndSound.play()
-	# Handle player hurt. Reduce time.
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if playing and get_tree().get_nodes_in_group("coins").size() < 1:
+	if playing and get_tree().get_nodes_in_group("coins").size() == 0:
 		level = level + 1
 		time_left += 5
 		spawn_coins()
+		$PowerupTimer.wait_time = randf_range(5, 10)
+		$PowerupTimer.start()
 
 func _on_game_timer_timeout():
 	time_left -= 1
 	$scene_hud.update_timer(time_left)
-	if time_left < 0:
+	if time_left <= 0:
 		game_over()  # end if the game's time is up.
 
 func game_over():
@@ -90,6 +103,7 @@ func game_over():
 	get_tree().call_group("coins", "queue_free")
 	$scene_hud.show_game_over()
 	$ScenePlayer.die()
+	$EndSound.play()
 
 func _on_hud_start_game():  # TODO: Delete. never gets called?!!
 	print("DEBUG at scene_main._on_hud_start_game(): Received the start_game signal on scene_main.gd")
@@ -118,7 +132,26 @@ func new_game() -> void:
 	#new_game()  # starts a new game when HUD sends the start_game signal.
 
 
-func _on_powerup_timer_timeout() -> void:
+func _on_powerup_timer_timeout():
 	var p = powerup_scene.instantiate()
 	add_child(p)
-	p.screensize = screensize p.position = 
+	p.screensize = screensize
+	p.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
+
+
+func _on_scene_player_pickup(item: String) -> void:  # What actually runs; not 
+	print("DEBUG scene_main._on_player_pickup")
+	match item:
+		"coin":
+			$CoinSound.play()
+			score += 1
+			$scene_hud.update_score(score)
+		"powerup":
+			$PowerupSound.play()
+			time_left += 5
+			$scene_hud.update_timer(time_left)
+	# Handle picking up my item.
+
+
+func _on_scene_player_hurt() -> void:
+	game_over()
