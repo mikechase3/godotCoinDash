@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhr1itwbwg124"]
+
+[ext_resource type="Texture2D" uid="uid://d0jb5n1ke05s6" path="res://assets/Sunnyland/environment/Props/rock-1.png" id="1_gscnm"]
+[ext_resource type="Script" path="res://scene_obstacle.gd" id="1_x7d85"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_rg2hb"]
+points = PackedVector2Array(23.74, 21.77, -24.53, 22.01, -16.89, -1.62, 4.58, -22.71, 15, -2.19)
+
+[node name="scene_obstacle" type="Area2D"]
+script = ExtResource("1_x7d85")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gscnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_rg2hb")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

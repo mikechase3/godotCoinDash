@@ -3,6 +3,7 @@ extends Node
 # Global Vars
 @export var coin_scene: PackedScene  # point to .tscn in the inspector?
 @export var powerup_scene: PackedScene
+@export var obstacle_scene: PackedScene
 @export var playtime = 30
 
 @export var level = 1
@@ -57,6 +58,31 @@ func spawn_coins():
 		c.position = Vector2(rx, ry)
 	$LevelSound.play()
 			
+			
+func spawn_obstacles():
+	"""
+	Spawns moon rocks. LLM-aided function hency why it doesn't work.
+	"""
+	var numObstaclesToSpawn: int = level + 3
+	var player_position = $ScenePlayer.position
+
+	for j in numObstaclesToSpawn:
+		var o = obstacle_scene.instantiate()
+		add_child(o)
+		#o.screen_size = get_viewport().get_visible_rect().size  # TODO: don't use this expensive func in a loop.
+
+		# Generate random position for obstacle
+		var rx = randi_range(0, screensize.x)
+		var ry = randi_range(0, screensize.y)
+
+		# Ensure obstacle doesn't overlap the player's position (±10 pixels)
+		while abs(rx - player_position.x) <= 10 and abs(ry - player_position.y) <= 10:
+			rx = randi_range(0, screensize.x)
+			ry = randi_range(0, screensize.y)
+
+		# Set the obstacle's position
+		o.position = Vector2(rx, ry)
+
 
 	
 func _on_player_pickup(item: String) -> void:  # Unused; my attempt.
@@ -70,6 +96,8 @@ func _on_player_pickup(item: String) -> void:  # Unused; my attempt.
 			$PowerupSound.play()
 			time_left += 5
 			$scene_hud.update_timer(time_left)
+		"obstacle":  # cactus -> now moon rocks.
+			_on_player_hurt()  # TODO: Remove, Probably shouldn't call this manually.
 	# Handle picking up my item.
 	
 	
@@ -89,6 +117,7 @@ func _process(delta: float) -> void:
 		level = level + 1
 		time_left += 5
 		spawn_coins()
+		spawn_obstacles()
 		if (level % 5 == 0):
 			$MegaSkills.play()
 		$PowerupTimer.wait_time = randf_range(5, 10)
@@ -125,8 +154,9 @@ func new_game() -> void:
 	$ScenePlayer.show()
 	$GameTimer.start()
 	
-	# Spawn coins & update the HUD
+	# Spawn coins, obstalces & update the HUD
 	spawn_coins()
+	spawn_obstacles()
 	$scene_hud.update_score(score)
 	$scene_hud.update_timer(time_left)
 
@@ -155,8 +185,20 @@ func _on_scene_player_pickup(item: String) -> void:  # What actually runs; not
 			$PowerupSound.play()
 			time_left += 5
 			$scene_hud.update_timer(time_left)
+		"obstacle":
+			_on_player_hurt()
 	# Handle picking up my item.
 
 
 func _on_scene_player_hurt() -> void:
 	game_over()
+
+
+func _on_scene_obstacle_area_entered(area: Area2D) -> void:
+	print("DEBUG: Collided with rock - game over")
+	_on_player_hurt()
+
+
+func _on_scene_obstacle_hit_obstacle() -> void:
+	print("DEBUG: Collided with rock - game over")
+	_on_player_hurt()

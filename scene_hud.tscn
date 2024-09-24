@@ -1,19 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjbfgja52afvy"]
+[gd_scene load_steps=7 format=3 uid="uid://bjbfgja52afvy"]
 
 [ext_resource type="Script" path="res://scene_hud.gd" id="1_lj0t6"]
 [ext_resource type="FontFile" uid="uid://dxg5k85m2xveg" path="res://assets/Kenney Bold.ttf" id="1_otte8"]
 [ext_resource type="LabelSettings" uid="uid://cpfyaj0pi5ytb" path="res://labelSettings_small.tres" id="1_yh2t0"]
+[ext_resource type="Shader" path="res://scene_hud.gdshader" id="2_7jjiq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_budph"]
+shader = ExtResource("2_7jjiq")
 
 [sub_resource type="LabelSettings" id="LabelSettings_hkg4y"]
 font = ExtResource("1_otte8")
 font_size = 48
-shadow_size = 5
-shadow_color = Color(0.465576, 1, 0.601227, 0.682353)
+font_color = Color(0.273873, 0.273873, 0.273873, 1)
+shadow_size = 16
+shadow_color = Color(0.914017, 0.894414, 0.416146, 0.682353)
 
 [node name="scene_hud" type="CanvasLayer"]
 script = ExtResource("1_lj0t6")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+modulate = Color(0.388528, 0.361583, 0.359583, 1)
+material = SubResource("ShaderMaterial_budph")
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 23.0
@@ -45,8 +52,8 @@ offset_top = -11.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Mac Cheese's
-Coin Dash"
+text = "Foxy's  Golden
+Space Adventure"
 label_settings = SubResource("LabelSettings_hkg4y")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -62,4 +69,4 @@ offset_top = -54.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_otte8")
-text = "Start Mike Chase's Boring Coin Dash?"
+text = "Start Adventure? Avoid Obstacles. One (and only one) might kill you! "
