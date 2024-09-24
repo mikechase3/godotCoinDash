@@ -4,7 +4,7 @@ signal pickup
 signal hurt
 
 # Initialization and Variables
-@export var speed: int = 350
+@export var speed: int = 2100  #book said 350 but I doubled resolution.
 var velocity: Vector2 = Vector2.ZERO
 var screensize: Vector2 = Vector2(960, 1440)
 

@@ -85,9 +85,12 @@ func _on_player_hurt() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if playing and get_tree().get_nodes_in_group("coins").size() == 0:
+		$LevelUp.play()
 		level = level + 1
 		time_left += 5
 		spawn_coins()
+		if (level % 5 == 0):
+			$MegaSkills.play()
 		$PowerupTimer.wait_time = randf_range(5, 10)
 		$PowerupTimer.start()
 
@@ -104,6 +107,8 @@ func game_over():
 	$scene_hud.show_game_over()
 	$ScenePlayer.die()
 	$EndSound.play()
+	if (level < 5):
+		$YouSuck.play()
 
 func _on_hud_start_game():  # TODO: Delete. never gets called?!!
 	print("DEBUG at scene_main._on_hud_start_game(): Received the start_game signal on scene_main.gd")
